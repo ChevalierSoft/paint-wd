@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="">
+    <entry name="pixelWidth" type="Int">
+      <default>15</default>
+    </entry>
+    <entry name="colorRed" type="Color">
+      <default>#EF2323</default>
+    </entry>
+    <entry name="colorCyan" type="Color">
+      <default>#000000</default>
+    </entry>
+    <entry name="colorPink" type="Color">
+      <default>#F0D1F1</default>
+    </entry>
+    <entry name="colorMagenta" type="Color">
+      <default>#EAA0E8</default>
+    </entry>
+    <entry name="colorGray" type="Color">
+      <default>#E3E3E3</default>
+    </entry>
+  </group>
+</kcfg>
