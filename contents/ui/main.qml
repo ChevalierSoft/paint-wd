@@ -39,10 +39,10 @@ Decoration {
     color: decoration.client.active ? "#404040" : root.colorGray
     border.width: 0
     anchors.fill: parent
-    anchors.leftMargin: root.padding.left
-    anchors.rightMargin: root.padding.right
-    anchors.topMargin: root.padding.top
-    anchors.bottomMargin: root.padding.bottom
+    anchors.leftMargin: 1
+    anchors.rightMargin: 1
+    anchors.topMargin: 1
+    anchors.bottomMargin: 1
 
     // Custom borders: top and left (black), bottom and right (#808080)
     Rectangle {
@@ -96,6 +96,8 @@ Decoration {
       left: background.left
       right: background.right
       top: background.top
+      leftMargin: 0
+      rightMargin: 0
     }
 
     // 2x2 pixel checkerboard grid pattern (only visible on active window)
@@ -197,7 +199,7 @@ Decoration {
         top: parent.top
         topMargin: 1
         right: parent.right
-        rightMargin: root.pixelWidth * 3
+        rightMargin: 1
       }
     }
 
@@ -332,7 +334,7 @@ Decoration {
 
   function updatePadding() {
     if (!decoration.client.maximized) {
-      padding.setBorders(2 * pixelWidth);
+      padding.setBorders(0);
     } else {
       padding.setBorders(0);
     }
@@ -357,15 +359,15 @@ Decoration {
     let pw = decoration.readConfig("pixelWidth", 15);
     if (pw) root.pixelWidth = pw / 10;
 
-    borders.setBorders(4 * pixelWidth);
-    borders.bottom = 8 * pixelWidth;
-    borders.setTitle(titleRow.height + 6 * pixelWidth);
-    maximizedBorders.setBorders(4 * pixelWidth);
-    maximizedBorders.bottom = 8 * pixelWidth;
-    maximizedBorders.setTitle(titleRow.height + 6 * pixelWidth);
-    extendedBorders.setBorders(4 * pixelWidth);
-    extendedBorders.bottom = 8 * pixelWidth;
-    extendedBorders.setTitle(titleRow.height + 6 * pixelWidth);
+    borders.setBorders(1);
+    borders.bottom = 1;
+    borders.setTitle(titleRow.height);
+    maximizedBorders.setBorders(0);
+    maximizedBorders.bottom = 0;
+    maximizedBorders.setTitle(titleRow.height);
+    extendedBorders.setBorders(1);
+    extendedBorders.bottom = 1;
+    extendedBorders.setTitle(titleRow.height);
 
     updatePadding();
   }

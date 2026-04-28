@@ -47,7 +47,8 @@ DecorationButton {
         antialiasing: false
         // smooth: false
         anchors.fill: parent
-        anchors.topMargin: 0  // Padding from top edge
+        anchors.topMargin: 0
+        anchors.rightMargin: 0
         source: parent.source
         sourceSize: Qt.size(root.size, root.size)
         opacity: root.hovered ? 0.6 : 1.0
